@@ -1,8 +1,7 @@
 {
-  "name": "quoter",
-  "version": "1.0.0",
+  "name": "quotor",
+  "version": "1.0.3",
   "description": "Random quote provider",
-  "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
