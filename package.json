@@ -3,8 +3,13 @@
   "version": "1.0.3",
   "description": "Random quote provider",
   "scripts": {
-    "test": "node test/test.js"
+    "test": "node test/test.js",
+    "start": "node main.js"
   },
+  "main": "main.js",
   "author": "Krzysztof Kirsz",
-  "license": "MIT"
+  "license": "MIT",
+  "engines": {
+    "node": "6.11.1"
+  }
 }
