@@ -4,7 +4,7 @@
   "description": "Random quote provider",
   "scripts": {
     "test": "node test/test.js",
-    "start": "node main.js"
+    "start": "node start.js"
   },
   "main": "main.js",
   "author": "Krzysztof Kirsz",
