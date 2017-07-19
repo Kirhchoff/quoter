@@ -7,7 +7,7 @@ var startServer = function(port){
     var pathname = url.parse(request.url).pathname;
     console.log(pathname);
     if(pathname == "/quote"){
-      response.writeHead(200, {'Content-Type': 'text/plain'});
+      response.writeHead(200, {'Content-Type': 'text/plain', 'Access-Control-Allow-Origin': '*'});
       response.end(quotor());
     }
     else{
