@@ -4,13 +4,15 @@ var quotor = require('./quotes');
 
 var startServer = function(port){
   http.createServer(function(request, response){
-    var pathname = url.parse(request.url).pathname;
-    console.log(pathname);
-    if(pathname == "/quote"){
+    console.log(request.url);
+    reqUrl = url.parse(request.url);
+    var pathname = reqUrl.pathname;
+    if (pathname == "/quote"){
+      let qid = reqUrl.query.slice(2);
       response.writeHead(200, {'Content-Type': 'text/plain', 'Access-Control-Allow-Origin': '*'});
-      response.end(quotor());
+      response.end(quotor(qid));
     }
-    else{
+    else {
       response.writeHead(200, {'Content-Type': 'text/html'});
       response.end("Random quote for you:<br><h1>" + quotor() + "</h1>");
     }

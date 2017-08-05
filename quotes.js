@@ -50,7 +50,11 @@ has the guts to say no. It's the only way you can really get anything done.",
   "An estimate is not a number. An estimate is a distribution."
 ];
 
-function getQuote() {
+function getQuote(qid) {
+  index = parseInt(qid);
+  if (index && index != NaN) {
+    return quotes[index];
+  }
   return quotes[Math.floor(Math.random() * quotes.length)];
 }
 
