@@ -8,7 +8,7 @@ var startServer = function(port){
     reqUrl = url.parse(request.url);
     var pathname = reqUrl.pathname;
     if (pathname == "/quote"){
-      let qid = reqUrl.query.slice(2);
+      let qid = reqUrl.query ? reqUrl.query.slice(2) : undefined;
       response.writeHead(200, {'Content-Type': 'text/plain', 'Access-Control-Allow-Origin': '*'});
       response.end(quotor(qid));
     }
