@@ -55,7 +55,8 @@ function getQuote(qid) {
   if (index && index != NaN) {
     return quotes[index];
   }
-  return quotes[Math.floor(Math.random() * quotes.length)];
+  //TODO: return proper object with all mandatory fields (decide on the format of optional fields)
+  return {text: quotes[Math.floor(Math.random() * quotes.length)]};
 }
 
 module.exports = getQuote;

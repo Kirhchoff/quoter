@@ -3,7 +3,7 @@
   "version": "1.0.3",
   "description": "Random quote provider",
   "scripts": {
-    "test": "node test/test.js",
+    "test": "jest",
     "start": "node start.js"
   },
   "main": "main.js",
@@ -11,5 +11,8 @@
   "license": "MIT",
   "engines": {
     "node": "6.11.1"
+  },
+  "devDependencies": {
+    "jest": "^20.0.4"
   }
 }
