@@ -5,5 +5,6 @@ describe("getQuotes", () => {
     const result = quotes();
     expect(typeof result).toBe('object');
     expect(result).toHaveProperty('text', expect.any(String));
+    expect(result).toHaveProperty('author', expect.any(String));
   });
 });
