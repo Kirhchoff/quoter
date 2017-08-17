@@ -18,8 +18,8 @@ function parseRequest(request) {
   return {
     type: reqUrl.pathname,
     //TODO: tidy up this parameter parsing
-    // get data after "?="
-    qid: reqUrl.query ? reqUrl.query.slice(1) : undefined}
+    // get data after "?q="
+    qid: reqUrl.query ? reqUrl.query.slice(2) : undefined}
 }
 
 module.exports = {
