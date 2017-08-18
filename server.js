@@ -19,7 +19,8 @@ function parseRequest(request) {
     type: reqUrl.pathname,
     //TODO: tidy up this parameter parsing
     // get data after "?q="
-    qid: reqUrl.query ? reqUrl.query.slice(2) : undefined}
+    qid: reqUrl.query ? reqUrl.query.slice(2) : undefined
+  }
 }
 
 module.exports = {
