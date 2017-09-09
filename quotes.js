@@ -57,9 +57,10 @@ var sources = {
 
 function getQuote(qid) {
   index = parseInt(qid);
+  let rv;
   if (index && index != NaN) {
     if (index < 0) {
-      return quotes[-index-1];
+      rv = quotes[-index-1];
     }
   }
   //TODO: return proper object with all mandatory fields (decide on the format of optional fields)
