@@ -51,15 +51,21 @@ The difference is profound.", author: {name: "Robert C. Martin (Uncle Bob)", pag
   {id: -30, text: "An estimate is not a number. An estimate is a distribution.", author: {name: "Robert C. Martin (Uncle Bob)", page: "https://sites.google.com/site/unclebobconsultingllc/"}}
 ];
 
+var sources = {
+  "Clean Code": {type: "book", url: "https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882", name: "Clean Code", img: "https://images-na.ssl-images-amazon.com/images/I/41TINACY3hL._SX384_BO1,204,203,200_.jpg"}
+};
+
 function getQuote(qid) {
   index = parseInt(qid);
   if (index && index != NaN) {
-    if(index < 0) {
+    if (index < 0) {
       return quotes[-index-1];
     }
   }
   //TODO: return proper object with all mandatory fields (decide on the format of optional fields)
-  return quotes[Math.floor(Math.random() * quotes.length)];
+  let rv = quotes[Math.floor(Math.random() * quotes.length)];
+  rv["source"] = sources["Clean Code"];
+  return rv;
 }
 
 module.exports = getQuote;
