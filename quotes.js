@@ -52,7 +52,7 @@ The difference is profound.", author: {name: "Robert C. Martin (Uncle Bob)", pag
 ];
 
 var sources = {
-  "Clean Code": {type: "book", url: "https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882", name: "Clean Code", img: "https://images-na.ssl-images-amazon.com/images/I/41TINACY3hL._SX384_BO1,204,203,200_.jpg"}
+  "Clean Code": {type: "book", url: "http://amzn.to/2wh6PBi", name: "Clean Code: A Handbook of Agile Software Craftsmanship", img: "//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=0132350882&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=420dc3-20"}
 };
 
 function getQuote(qid) {
