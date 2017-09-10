@@ -58,13 +58,11 @@ var sources = {
 function getQuote(qid) {
   index = parseInt(qid);
   let rv;
-  if (index && index != NaN) {
-    if (index < 0) {
-      rv = quotes[-index-1];
-    }
+  if (index && index != NaN && index < 0) {
+    rv = quotes[-index-1];
+  } else {
+    rv = quotes[Math.floor(Math.random() * quotes.length)];
   }
-  //TODO: return proper object with all mandatory fields (decide on the format of optional fields)
-  let rv = quotes[Math.floor(Math.random() * quotes.length)];
   rv["source"] = sources["Clean Code"];
   return rv;
 }
