@@ -8,8 +8,9 @@ var startServer = function(port){
     console.log(req);
     if (req.type == "/quote"){
       server.getQuoteJsonResponse(response, req.qid);
-    }
-    else {
+    } else if (req.type == "/favicon.ico") {
+      server.favicon(response);
+    } else if (req.type == "/") {
       server.defaultResponse(response);
     }
   }).listen(port);

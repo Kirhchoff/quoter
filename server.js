@@ -2,6 +2,10 @@
 var quotor = require('./quotes');
 var url = require('url');
 
+function favicon(response) {
+  response.end();
+}
+
 function defaultResponse(response) {
   response.writeHead(200, {'Content-Type': 'text/html'});
   response.end(`Random quote for you:<br><h1>${quotor().text}</h1>`);
@@ -26,5 +30,6 @@ function parseRequest(request) {
 module.exports = {
   parseRequest: parseRequest,
   defaultResponse: defaultResponse,
-  getQuoteJsonResponse: getQuoteJsonResponse
+  getQuoteJsonResponse: getQuoteJsonResponse,
+  favicon: favicon
 };
