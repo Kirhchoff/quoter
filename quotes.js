@@ -58,19 +58,40 @@ const quotes = [
   {id: -56, source_: "Career Guide", text: "The first thing to know about job titles is that they don't really matter.", author_: "John Sonmez"},
   {id: -57, source_: "Career Guide", text: "For some reason, programmers really like to argue with people and to yell.", author_: "John Sonmez"},
   {id: -58, source_: "Career Guide", text: "You really should spend at least three times more time thinking about the code you are about to write as you do actually writing it.", author_: "John Sonmez"},
-  {id: -59, source_: "Career Guide", text: "One of the things you can do as a software developer on your team is to make sure that you don't pick up new work when you can contribute to work that is already in progress by another team member.", author_: "John Sonmez"}
+  {id: -59, source_: "Career Guide", text: "One of the things you can do as a software developer on your team is to make sure that you don't pick up new work when you can contribute to work that is already in progress by another team member.", author_: "John Sonmez"},
+  {id: -60, source_: "Career Guide", text: "Make sure that any unit test you write don't just pass under any conditions.", author_: "John Sonmez"},
+  {id: -61, source_: "Career Guide", text: "If you are going to speak, speak with conviction - always.", author_: "John Sonmez"},
+  {id: -62, source_: "Career Guide", text: "There is a huge difference between \"reading\" and \"doing\"", author_: "John Sonmez"},
+  {id: -63, source_: "Unknown", text: "It had long since come to my attention that people of accomplishment rarely sat back and let things happen to them. They went out and happened to things.", author_: "Da Vinci"},
+  {id: -64, source_: "Oppong", text: "Doing [is] easier than thinking about doing", author_: "Thomas Oppong"},
+  {id: -65, source_: "Synchronisation quadrant", text: "All computers wait at the same speed.", author_: "Kevlin"},
+  {id: -66, source_: "Word games", text: "The absence of a particular kind of test or measure indicates that a particular aspect is not seen as critical.", author_: "Kevlin"},
+  {id: -67, source_: "Word games", text: "One programmer's unit test could be another's integration test.", author_: "Kevlin"},
+  {id: -68, source_: "Word games", text: "A unit test is a test of behaviour (normally functional) whose success or failure is wholly determined by the correctness of the test and the correctness of the unit under test.", author_: "Kevlin"},
+  {id: -69, source_: "Word games", text: "Unit testability offers feedback on the quality of coupling in a system.", author_: "Kevlin"},
+  {id: -70, source_: "Logrocket", text: "The propensity of some Devs to throw sudo commands at package managers if a command fails is also terrifying.", author_: "Robin Percy"},
+  {id: -71, source_: "Logrocket", text: "Take a note of any new tools / packages before you grant them permissions, and do a little research.", author_: "Robin Percy"}
 ];
 
 const sources = {
+  "Unknown": {type: "unknown soure", url: "#", name: "Unknown source", img: ""},
   "Clean Code": {type: "book", url: "http://amzn.to/2wh6PBi", name: "Clean Code: A Handbook of Agile Software Craftsmanship", img: "//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=0132350882&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=420dc3-20"}
   ,"The Clean Coder": {type: "book", name: "The Clean Coder: A Code of Conduct for Professional Programmers", url: "https://www.amazon.com/gp/product/0137081073/ref=as_li_tl?ie=UTF8&tag=420dc3-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=0137081073&linkId=0fb705b2d2e5d0701761ccf513cb44a5", img: "//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=0137081073&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=420dc3-20"}
   ,"Career Guide": {type: "book", name: "The Complete Software Developer's Career Guide: How to Learn Programming Languages Quickly, Ace Your Programming Interview, and Land Your Software Developer Dream Job",
     url: "https://www.amazon.com/gp/product/0999081411/ref=as_li_tl?ie=UTF8&tag=420dc3-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=0999081411&linkId=90debf59610cb9ada11e9b8b462bf954", img: "//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=0999081411&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=420dc3-20"}
+  ,"Oppong": {type: "blog", name: "Thomas Oppong at Medium.com", url: "https://medium.com/@alltopstartups", img: "https://cdn-images-1.medium.com/max/1200/1*etUthOXG-BrZm25K7wEcgA.png"}
+  ,"Synchronisation quadrant": {type: "presentation", name: 'Code::dive 2016 conference, "Thinking outside the synchronisation quadrant"', url: "https://youtu.be/yl25p91flLY", img: "https://yt3.ggpht.com/-KfhKyry-T40/AAAAAAAAAAI/AAAAAAAAAAA/Qaebu2ttL0s/s900-c-k-no-mo-rj-c0xffffff/photo.jpg"}
+  ,"Word games": {type: "article", name: "One programmer's unit test is another's integration test", url: "https://www.theregister.co.uk/2007/07/28/what_are_your_units", img: "https://static.4ix.science/uploads/2016/10/The-Register.jpg"}
+  ,"Logrocket": {type: "blog", name: "LogRocket", url: "https://blog.logrocket.com/", img: "https://media.licdn.com/mpr/mpr/shrink_200_200/AAEAAQAAAAAAAAkkAAAAJDA5ZmFjMzFhLWUyZTgtNDcwMC1iYzRjLWI4YzgxMjBiNGQ2Mg.png"}
 };
 
 const authors = {
   "Uncle Bob": {name: "Robert C. Martin (Uncle Bob)", page: "https://sites.google.com/site/unclebobconsultingllc/"},
-  "John Sonmez": {name: "John Sonmez", page: "https://simpleprogrammer.com/"}
+  "John Sonmez": {name: "John Sonmez", page: "https://simpleprogrammer.com/"},
+  "Da Vinci": {name: "Leonardo Da Vinci", page: "https://wikipedia.org/wiki/Leonardo_da_Vinci"},
+  "Thomas Oppong": {name: "Thomas Oppong", page: "https://medium.com/@alltopstartups"},
+  "Kevlin": {name: "Kevlin Henney", page: "http://curbralan.com/"},
+  "Robin Percy": {name: "Robin Percy", page: "https://blog.logrocket.com/@rbnpercy"}
 }
 
 function getQuote(qid) {
