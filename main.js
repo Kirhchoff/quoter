@@ -15,6 +15,10 @@ var startServer = function(port){
     }
   }).listen(port);
   console.log("Server running @"+port);
+
+  setInterval(function() {
+    http.get("http://quotor.herokuapp.com");
+  }, 300000);
 }
 
 quotor.startServer = startServer;
